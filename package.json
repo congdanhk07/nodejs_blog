@@ -1,0 +1,26 @@
+{
+  "name": "node_course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congdanhk07/nodejs_blog.git"
+  },
+  "author": "TCDanh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/congdanhk07/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/congdanhk07/nodejs_blog#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
