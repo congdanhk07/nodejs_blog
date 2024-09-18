@@ -6,6 +6,9 @@ const { engine } = require("express-handlebars");
 const app = express();
 const port = 3000;
 
+// Static file
+app.use(express.static(path.join(__dirname, "public")));
+
 // Template engine
 app.engine(
   "hbs",
@@ -17,8 +20,6 @@ app.engine(
 );
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "/resources/views"));
-console.log(path.join(__dirname, "resources/views"));
-// console.log(path.join(__dirname));
 // HTTP loggers
 app.use(morgan("combined"));
 // Define routes and render template
