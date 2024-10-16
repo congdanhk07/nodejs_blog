@@ -13,6 +13,10 @@ class CourseController {
   create(req, res, next) {
     res.render("courses/create");
   }
+  //[GET] /course/:id/edit
+  edit(req, res, next) {
+    res.render("courses/edit");
+  }
   //[POST] /course/store
   store(req, res, next) {
     const formData = req.body;

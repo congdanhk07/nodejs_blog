@@ -27,6 +27,9 @@ app.engine(
     extname: ".hbs",
     defaultLayout: "main",
     partialsDir: __dirname + "/resources/views/partials/",
+    helpers: {
+      sum: (a, b) => a + b,
+    },
   })
 );
 app.set("view engine", "hbs");
