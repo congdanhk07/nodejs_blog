@@ -2,6 +2,8 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
+const methodOverride = require("method-override");
+
 const route = require("./routes");
 const db = require("./config/db");
 const app = express();
@@ -12,6 +14,9 @@ db.connect();
 
 // Static file
 app.use(express.static(path.join(__dirname, "public")));
+
+// More method HTTP
+app.use(methodOverride("_method"));
 
 // Middleware form and body
 app.use(
